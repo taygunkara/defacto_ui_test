@@ -2,6 +2,12 @@
 
 ---
 
+`mvn clean`
+
+`mvn test`
+
+---
+
 ***Maven Libraries***
 
 - selenium
