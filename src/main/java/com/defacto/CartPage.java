@@ -13,9 +13,9 @@ public class CartPage extends BasePage{
 
     public static Logger log  = Logger.getLogger(CartPage.class);
 
-    private final By completeShoppingButtonLocator = By.xpath("//*[@id=\"summaryCompletedButton\"]");
+    private final By completeShoppingButtonLocator = By.xpath("//button[@id='summaryCompletedButton']");
     private final String deleteProductButtonText = "Sil";
-    private final By secondDeleteButtonLocator = By.xpath("//*[@id=\"productDeleteModal\"]/div/div[2]/div[2]/button[2]");
+    private final By popUpDeleteButtonLocator = By.xpath("//*[@id='productDeleteModal']/div/div[2]/div[2]/button[2]");
     private final By checkCartPageLocator = By.cssSelector(".shopping__empty--title");
 
     public boolean isOnCartPage() {
@@ -27,10 +27,9 @@ public class CartPage extends BasePage{
             return false;
         }
     }
-
     public void deleteProduct() {
         clickText(deleteProductButtonText);
-        clickElement(secondDeleteButtonLocator);
+        clickElement(popUpDeleteButtonLocator);
     }
     public boolean isCartEmpty() {
         waitUntilItemShowsUp(checkCartPageLocator);

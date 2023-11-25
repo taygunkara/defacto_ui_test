@@ -9,14 +9,12 @@ public class SubCategoryPage extends BasePage{
     }
 
     private final By moreSizeButtonLocator = By.xpath("/html/body/main/div/div[6]/div/div[1]/div/div/div/ul/li[2]/ul/li[2]/button[1]");
-    private final By smallSizeSelectLocator = By.cssSelector("#catalog-filter__nav > ul > li:nth-child(2) > ul > li.catalog-filter__option--group.initialized > ul > li:nth-child(19) > div > label");
-    private final By searchSizeBoxLocator = By.xpath("/html/body/main/div/div[6]/div/div[1]/div/div/div/ul/li[2]/ul/li[1]/div/input");
-    private final By productLocator = By.xpath("//*[@id=\"product-fill\"]/div/div[3]/div/div[1]/div[3]/a");
+    private final By smallSizeSelectLocator = By.xpath("//li[@data-textfilter='S']");
+    private final By productLocator = By.xpath("//div[@id='product-fill']/*//div[@data-index='0']");
 
     public void selectSmallSize() {
         scrollDown();
         clickElement(moreSizeButtonLocator);
-        type(searchSizeBoxLocator, "s");
         clickElement(smallSizeSelectLocator);
     }
     public void selectProduct() throws InterruptedException {

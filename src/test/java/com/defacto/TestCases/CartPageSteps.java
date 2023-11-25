@@ -72,7 +72,7 @@ public class CartPageSteps extends BaseTest {
 
     @When("Select the Size")
     public void select_random_size(){
-        productPage.selectRandomSize();
+        productPage.selectProductSize();
     }
 
     @And("Click on the Add to Basket Button")
@@ -86,10 +86,11 @@ public class CartPageSteps extends BaseTest {
         assertTrue(basketCard.isProductOnBasket());
     }
 
-    @When("Click on the Basket Summary")
+/*    @When("Click on the Basket Summary")
     public void click_cart_summary(){
         basketCard.clickBasketSummary();
     }
+*/
 
     @And("Click on the Go to Cart Page Button")
     public void go_to_cartpage(){

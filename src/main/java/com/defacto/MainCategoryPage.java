@@ -10,8 +10,8 @@ public class MainCategoryPage extends BasePage{
     }
     public static Logger log  = Logger.getLogger(MainCategoryPage.class);
 
-    private final By clothesButtonLocator = By.xpath("/html/body/header/nav/ul[1]/li[1]");
-    private final By jacketButtonLocator = By.xpath("/html/body/header/nav/ul[1]/li[1]/div/div[2]/ul[2]/li[4]/a");
+    private final By clothesButtonLocator = By.xpath("(//a[@name='giyim'])[1]");
+    private final By jacketButtonLocator = By.linkText("Ceket");
 
     public boolean isAppearSubcategories() {
         if (isDisplayed(jacketButtonLocator)){

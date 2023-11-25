@@ -18,7 +18,7 @@ Feature: DeFacto UI Test
     And Click on the Add to Basket Button
     Then Verify to Number of Product on Basket
 
-    When Click on the Basket Summary
+    #When Click on the Basket Summary
     And Click on the Go to Cart Page Button
     Then Verify to Cart Page
 

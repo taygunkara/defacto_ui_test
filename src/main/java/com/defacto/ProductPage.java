@@ -11,9 +11,10 @@ public class ProductPage extends BasePage{
 
     public static Logger log  = Logger.getLogger(ProductPage.class);
 
-    private final By nowBuyButtonLocator = By.cssSelector("#cm-d3ac8224-56ad-4f3b-8537-b949660d8fdb > div > div > div.product-payment-options__title");
+
+    private final By nowBuyButtonLocator = By.xpath("//div[@class='product-payment-options__title']");
     private final By addProductToBasketButtonLocator = By.cssSelector(".action-btn-text1");
-    private final By selectSizeLocator = By.cssSelector("button.cross-border-button:nth-child(2)");
+    private final By selectSizeLocator = By.xpath("//button[@value='S']");
 
     public boolean isOnProductPage() {
         if (isDisplayed(nowBuyButtonLocator)){
@@ -24,7 +25,7 @@ public class ProductPage extends BasePage{
             return false;
         }
     }
-    public void selectRandomSize() {
+    public void selectProductSize() {
         clickElement(selectSizeLocator);
     }
     public void addProductToBasket() {

@@ -12,9 +12,9 @@ public class BasketCard extends BasePage{
     }
 
     public static Logger log  = Logger.getLogger(BasketCard.class);
-    private final By basketSummaryButtonLocator = By.xpath("/html/body/header/div[2]/div[3]/div[4]/a/span[1]");
-    private final By basketProductCount = By.xpath("//*[@id=\"flycartBtn\"]/span[2]");
-    private final By goToCartPageButtonLocator = By.xpath("/html/body/div[1]/div[3]/div/button[2]");
+    //private final By basketSummaryButtonLocator = By.xpath("/html/body/header/div[2]/div[3]/div[4]/a/span[1]");
+    private final By basketProductCount = By.xpath("//a[@id='flycartBtn']//span[@class='mini-basket-count']");
+    private final By goToCartPageButtonLocator = By.xpath("//a[@id='flycartBtn']");
 
     public boolean isProductOnBasket() throws InterruptedException {
         Thread.sleep(5000);
@@ -27,10 +27,10 @@ public class BasketCard extends BasePage{
         }
     }
 
-    public void clickBasketSummary() {
+/*    public void clickBasketSummary() {
         clickElement(basketSummaryButtonLocator);
     }
-
+*/
     public void goToCartpage() {
         clickElement(goToCartPageButtonLocator);
     }
